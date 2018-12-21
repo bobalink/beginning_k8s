@@ -1,12 +1,12 @@
 # Note: this service doesn't work. Use this command: 
-# kubectl expose deployment dvlp-app -n dvlp-k8s --type="LoadBalancer"
+# kubectl expose deployment kitten-game -n dvlp-k8s --type="LoadBalancer"
 
 apiVersion: v1
 kind: Service
 metadata:
-  name: dvlp-app
+  name: kitten-game
   labels:
-    app: dvlp-app
+    app: kitten-game
 spec:
   type: LoadBalancer
   ports:
@@ -15,6 +15,6 @@ spec:
       port: 80
       targetPort: 8080
   selector:
-    app: dvlp-app
+    app: kitten-game
 
 

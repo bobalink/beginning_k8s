@@ -1,19 +1,19 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: dvlp-app
+  name: kitten-game
 spec:
   selector:
     matchLabels:
-      app: dvlp-app
+      app: kitten-game
   template:
     metadata:
       labels:
-        app: dvlp-app
+        app: kitten-game
     spec:
       containers:
-      - name: dvlp-2018
-        image: kimschles/dvlp-2018:latest
+      - name: kitten-container
+        image: bobalink/kitten-game:latest
         command: ["npm", "start"]
         imagePullPolicy: IfNotPresent
         ports:
